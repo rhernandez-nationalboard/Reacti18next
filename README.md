@@ -28,7 +28,7 @@ Explanation: This performs a lookup in translation.json for the value given key 
 ### Displaying data
 The 2nd parameter of our t function is the data we want to pass into our translation file. Our file displays this data by using curly braces.
 
-#### Example: We display user name
+#### Example: Displaying user name
 ##### Code
 `<div>{t('line', { shoppingCart })}</div>`
 
@@ -40,16 +40,18 @@ The 2nd parameter of our t function is the data we want to pass into our transla
 This allows us to display the name property of the shopping cart variable
 
 ### Displaying plural data
-In order to support plural data we can specify another line in our translation file with the same key but _other appended to the end. We can do the same with zero by specifying _zero. We also have to leverage the keyword / parameter count in our translation file and pass this as a parameter.
+In order to support plural data we can specify another line in our translation file with the same key but _other appended to the end of the name. We can do the same with zero by specifying _zero. We also have to leverage the keyword / parameter count in our translation file and pass this as a parameter.
 
 ##### Code
 `<div>{t('line', { shoppingCart, count: shoppingCart.totalDogs })}</div>`
 
 ##### Translation file
-`{
+`
+{
   "plural_line_zero": "{{shoppingCart.name}} is not buying any dogs",
   "plural_line_one": "{{shoppingCart.name}} is buying 1 dog",
   "plural_line_other": "{{shoppingCart.name}} is buying {{count}} dogs"
-}`
+}
+`
 
 Note: There's more details about formatting within our notes folder
