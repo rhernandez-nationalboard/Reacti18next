@@ -6,6 +6,7 @@ function App() {
   const { t, i18n } = useTranslation(
     'translation'
   );
+  const supportedLanguages = ['en-US', 'es'];
   const dogPrice = 10.35;
   const [shoppingCart, setShoppingCart] = useState({
     name: 'John',
@@ -37,19 +38,31 @@ function App() {
 
   return (
     <>
-      <h3>{t('title_line')}</h3>
       <div>
-        <button onClick={addDog}>Buy dog</button>
-        <button onClick={removeDog}>Remove Dog</button>
+        <h3>
+          {t('title_line')}
+
+        </h3>
+        <select
+          value={i18n.resolvedLanguage}
+          onChange={(e) => i18n.changeLanguage(e.target.value)}
+        >
+          {supportedLanguages
+              .map((lng) => (
+                <option value={lng} key={lng}>{lng}</option>
+              ))}
+        </select>
       </div>
 
-      <div>{t('plural_line', { shoppingCart, count:  shoppingCart.totalDogs })}</div>
-      <div>{t('money_line', { shoppingCart })}</div>
-      <div>{t('date_line')}</div>
-
       <div className="card">
-        <button onClick={() => i18n.changeLanguage('en-US')}>English</button>
-        <button onClick={() => i18n.changeLanguage('es')}>Spanish</button>
+        <div>
+          <button onClick={addDog}>Buy dog</button>
+          <button onClick={removeDog}>Remove Dog</button>
+        </div>
+
+        <div>{t('plural_line', { shoppingCart, count:  shoppingCart.totalDogs })}</div>
+        <div>{t('money_line', { shoppingCart })}</div>
+        <div>{t('date_line')}</div>
       </div>
     </>
   )
