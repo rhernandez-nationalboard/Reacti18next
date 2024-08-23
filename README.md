@@ -9,9 +9,9 @@
 - Install language detection `npm install i18next-browser-languagedetector`
 
 ### Basic Overview
-We create a translation files within our public/locales. Each language we support will be split into different folders specified by the country code. We can further specify support for the region by adding a locale code. For example 
+The framework exposes a function which takes a key and returns the text that is appropriate for our region. We have to specify the text using translation files which are json file located within our public / locales.
 
-Our translation file is a json key value pair where the key will be referenced in code and the value will be what gets displayed
+Each language we support will be split into different folders specified by the country code. For example to add support for english we create a folder named 'en'.
 
 ##### Example JSON
 `
@@ -25,6 +25,17 @@ Code: `<div>{t('label_1')}</div>`
 
 Explanation: This performs a look in in translation.json for the value given key `label_1`
 
-### Supported Features
+### Displaying data
+The 2nd parameter of our t function is the data we want to pass into our translation file. Our file displays this data by using curly braces.
 
+#### Example: Display user that 
+##### Code
+`<div>{t('line', { shoppingCart })}</div>`
+
+##### Translation File
+`
+{ "line": "{{shoppingCart.name}} is buying some dogs" }
+`
+##### Explanation
+This allows us to display the name property of the shopping cart variable
 
