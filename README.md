@@ -13,17 +13,17 @@ The framework exposes a function which takes a key and returns the text that is 
 
 Each language we support will be split into different folders specified by the country code. For example to add support for english we create a folder named 'en'.
 
-##### Example JSON
+##### Example Translation File
 `
 {
   'label_1': 'This is the title of my page'
 }
 `
 
-##### Example Translation
+##### Example Code
 Code: `<div>{t('label_1')}</div>`
 
-Explanation: This performs a look in in translation.json for the value given key `label_1`
+Explanation: This performs a lookup in translation.json for the value given key `label_1`
 
 ### Displaying data
 The 2nd parameter of our t function is the data we want to pass into our translation file. Our file displays this data by using curly braces.
