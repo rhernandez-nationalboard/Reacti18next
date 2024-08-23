@@ -15,3 +15,5 @@ Dates are pretty straightforward to display. We just provide the datetime argume
 
 ##### Code
 `<div>{t('money_line', { shoppingCart })}</div>`
+
+Additional Formatting can be found here: https://www.i18next.com/translation-function/formatting
