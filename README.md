@@ -28,7 +28,7 @@ Explanation: This performs a lookup in translation.json for the value given key 
 ### Displaying data
 The 2nd parameter of our t function is the data we want to pass into our translation file. Our file displays this data by using curly braces.
 
-#### Example: Display user that 
+#### Example: We display user name
 ##### Code
 `<div>{t('line', { shoppingCart })}</div>`
 
