@@ -1,7 +1,7 @@
 {
   "title_line": "Tienda de mascotas",
   "money_line": "{{shoppingCart.name}} va pagar {{shoppingCart.totalPrice, currency(USD)}}",
-  "date_line": "",
+  "date_line": "Fecha: {{shoppingCart.currentDate, datetime}}",
   "plural_line_zero": "{{shoppingCart.name}} no va comprad perros",
   "plural_line_one": "{{shoppingCart.name}} esta comprando 1 perro",
   "plural_line_other": "{{shoppingCart.name}} esta comprando {{count}} perros"

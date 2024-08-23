@@ -12,6 +12,7 @@ function App() {
     name: 'John',
     totalDogs: 0,
     totalPrice: 0,
+    currentDate: new Date("2024-08-23"),
   });
 
   const addDog = () => {
@@ -62,7 +63,7 @@ function App() {
 
         <div>{t('plural_line', { shoppingCart, count:  shoppingCart.totalDogs })}</div>
         <div>{t('money_line', { shoppingCart })}</div>
-        <div>{t('date_line')}</div>
+        <div>{t('date_line', {shoppingCart})}</div>
       </div>
     </>
   )

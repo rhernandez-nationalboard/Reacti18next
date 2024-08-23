@@ -1,7 +1,7 @@
 {
   "title_line": "Pet Store",
   "money_line": "{{shoppingCart.name}} is paying {{shoppingCart.totalPrice, currency(USD)}}",
-  "date_line": "",
+  "date_line": "Current Date: {{shoppingCart.currentDate, datetime}}",
   "plural_line_zero": "{{shoppingCart.name}} is not buying any dogs :(",
   "plural_line_one": "{{shoppingCart.name}} is buying 1 dog",
   "plural_line_other": "{{shoppingCart.name}} is buying {{count}} dogs"
