@@ -1,33 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useTranslation } from 'react-i18next'
+import {useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { t, i18n } = useTranslation(
+    'translation'
+  );
+  const dogPrice = 10.35;
+  const [shoppingCart, setShoppingCart] = useState({
+    name: 'John',
+    totalDogs: 0,
+    totalPrice: 0,
+  });
+
+  const addDog = () => {
+    const totalDogs = shoppingCart.totalDogs + 1;
+    const totalPrice = totalDogs * dogPrice;
+    setShoppingCart({
+      ...shoppingCart,
+      totalDogs: totalDogs,
+      totalPrice,
+    })
+  }
+
+  const removeDog = () => {
+    const totalDogs = shoppingCart.totalDogs > 0
+      ? shoppingCart.totalDogs - 1 
+      : 0;
+    const totalPrice = totalDogs * dogPrice;
+    setShoppingCart({
+      ...shoppingCart,
+      totalDogs,
+      totalPrice
+    })
+  }
 
   return (
     <>
+      <h3>{t('title_line')}</h3>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <button onClick={addDog}>Buy dog</button>
+        <button onClick={removeDog}>Remove Dog</button>
       </div>
-      <h1>Vite + React</h1>
+
+      <div>{t('plural_line', { shoppingCart, count:  shoppingCart.totalDogs })}</div>
+      <div>{t('money_line', { shoppingCart })}</div>
+      <div>{t('date_line')}</div>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button onClick={() => i18n.changeLanguage('en-US')}>English</button>
+        <button onClick={() => i18n.changeLanguage('es')}>Spanish</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
