@@ -1,6 +1,10 @@
 ### Stats
 - Weekly Downloads: 3.3M
 - Last Publish: 14 days ago
+- Tons of plugins
+- built-in complex plural support
+- uses Javascript's native Intl objects for dates and number formating
+- 22.2kBs
 - Note: built on top of i18n
 
 Built on top of i18next
