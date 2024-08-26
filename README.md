@@ -3,6 +3,11 @@
 - Last Publish: 14 days ago
 - Note: built on top of i18n
 
+Built on top of i18next
+- Weekly Downloads: 5.7M
+- Last Publish: 7 days ago
+- Site: https://www.i18next.com/
+
 ### Installing
 - Install `npm install react-i18next i18next`
 - Install localizations async `npm install i18next-http-backend`
