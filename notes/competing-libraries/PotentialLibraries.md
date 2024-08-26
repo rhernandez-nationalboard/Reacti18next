@@ -1,9 +1,10 @@
 ## FormatJS
-Description: Set of i18n libraries with heavy focus on standards.
+Description: Set of i18n libraries with heavy focus on ICU Message syntax and unicode CLDR (Common Locale Data Repo).
 
 #### Stats
 - Weekly downloads: 1.1M
 - Smaller than Next1i18n
+- Good Documentation
 - No solutions for language detection
 - No solutions for translation file loading
 
