@@ -1,9 +1,9 @@
 #### Setup overview
 1. Install packages
-`
+```
 npm install --save-dev @lingui/cli @lingui/macro
-pm install @lingui/react
-`
+npm install @lingui/react
+```
 2. Create config file with path to translation files
 3. Add cli scripts to extract and compile text.
 4. Extract and compile messages.
