@@ -43,12 +43,12 @@ In order to support plural data we can specify another line in our translation f
 `<div>{t('line', { shoppingCart, count: shoppingCart.totalDogs })}</div>`
 
 ##### Translation file
-`
+```
 {
   "plural_line_zero": "{{shoppingCart.name}} is not buying any dogs",
   "plural_line_one": "{{shoppingCart.name}} is buying 1 dog",
   "plural_line_other": "{{shoppingCart.name}} is buying {{count}} dogs"
 }
-`
+```
 
 Note: There's more details about formatting within our notes folder
