@@ -6,7 +6,6 @@
 - built-in complex plural support
 - uses Javascript's native Intl objects for dates and number formating
 - 22.2kBs
-- Note: built on top of i18n
 
 Built on top of i18next
 - Weekly Downloads: 5.7M
@@ -22,7 +21,7 @@ Description: Set of i18n libraries with heavy focus on ICU Message syntax and un
 - Good Documentation
 - No solutions for language detection
 - No solutions for translation file loading
-
+- Site: https://formatjs.io/docs/react-intl/
 
 ## Lingui JS
 Description: Small library leveraging the ICU message format for localization
@@ -33,3 +32,4 @@ Description: Small library leveraging the ICU message format for localization
 - Complex plural support
 - Formats dates and numbers using Javascript's Intl objects
 - Library requires message extraction and compilation for locale testing
+- Site: https://lingui.dev/
