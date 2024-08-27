@@ -4,8 +4,7 @@
 Note: we'll have to setup the default locale
 
 ##### App Code
-`
-// use framework
+```
 const intl = useIntl();
 
 <header>
@@ -21,10 +20,10 @@ const intl = useIntl();
     />
   </p>
 </main>
-`
+```
 
 ##### Wrapper Component
-`
+```
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
 
@@ -61,4 +60,4 @@ function I18n({ render }) {
 }
 
 export default I18n;
-`
+```
