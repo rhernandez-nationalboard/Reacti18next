@@ -16,7 +16,7 @@ pm install @lingui/react
 - Compile po file
 
 ##### App Code
-`
+```
 <header>
   <img
     src={logo}
@@ -40,10 +40,10 @@ pm install @lingui/react
     </Trans>
   </p>
 </main>
-`
+```
 
 ##### English PO File
-`
+```
 // src/locales/en-US/messages.po
 
 msgid ""
@@ -59,10 +59,10 @@ msgstr "This demo app was internationalized using LinguiJS"
 
 msgid "logo"
 msgstr "logo"
-`
+```
 
 ##### Arabic PO File
-`
+```
 // src/locales/ar-EG/messages.po
 
 msgid ""
@@ -77,9 +77,9 @@ msgstr "تم تدويل هذا التطبيق التجريبي باستخدام 
 
 msgid "logo"
 msgstr "رمز التطبيق"
-`
+```
 ##### Config file
-`
+```
 {
   "locales": [
     "en-US",
@@ -95,4 +95,4 @@ msgstr "رمز التطبيق"
     }
   ]
 }
-`
+```
